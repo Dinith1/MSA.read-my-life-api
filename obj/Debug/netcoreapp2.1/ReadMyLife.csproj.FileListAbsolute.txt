@@ -1,0 +1,14 @@
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\bin\Debug\netcoreapp2.1\ReadMyLife.deps.json
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\bin\Debug\netcoreapp2.1\ReadMyLife.runtimeconfig.json
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\bin\Debug\netcoreapp2.1\ReadMyLife.runtimeconfig.dev.json
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\bin\Debug\netcoreapp2.1\ReadMyLife.dll
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.csproj.CoreCompileInputs.cache
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.RazorAssemblyInfo.cache
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.RazorAssemblyInfo.cs
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.AssemblyInfoInputs.cache
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.AssemblyInfo.cs
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.RazorTargetAssemblyInfo.cache
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\bin\Debug\netcoreapp2.1\ReadMyLife.pdb
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.dll
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.pdb
+C:\Users\Dinith\source\repos\ReadMyLife\ReadMyLife\obj\Debug\netcoreapp2.1\ReadMyLife.csprojAssemblyReference.cache
