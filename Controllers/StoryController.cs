@@ -46,6 +46,16 @@ namespace ReadMyLife.Controllers
             return Ok(storyItem);
         }
 
+        // GET: api/Story/Tag
+        [HttpGet("tag/{tag}")]
+        public async Task<List<StoryItem>> GetStoryItem([FromRoute] string tag)
+        {
+            var stories = (from s in _context.StoryItem where s.Tag.Equals(tag) select s);
+
+            var returned = await stories.ToListAsync();
+            return returned;
+        }
+
         // PUT: api/Story/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStoryItem([FromRoute] int id, [FromBody] StoryItem storyItem)
@@ -120,6 +130,11 @@ namespace ReadMyLife.Controllers
         private bool StoryItemExists(int id)
         {
             return _context.StoryItem.Any(e => e.StoryID == id);
+        }
+
+        private bool StoryItemExists(string tag)
+        {
+            return _context.StoryItem.Any(e => e.Tag == tag);
         }
     }
 }
