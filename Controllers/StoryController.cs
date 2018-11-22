@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ReadMyLife.Helpers;
 using ReadMyLife.Models;
 
 namespace ReadMyLife.Controllers
@@ -104,6 +105,40 @@ namespace ReadMyLife.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetStoryItem", new { id = storyItem.StoryID }, storyItem);
+        }
+
+        [HttpPost, Route("upload")]
+        public async Task<IActionResult> UploadFile([FromForm]SimpleStoryItem ssi)
+        {
+            if (!MultipartRequestHelper.IsMultipartContentType(Request.ContentType))
+            {
+                return BadRequest($"Expected a multipart request, but got {Request.ContentType}");
+            }
+            try
+            {
+                StoryItem storyItem = new StoryItem();
+
+                storyItem.Title = ssi.Title;
+                storyItem.AuthorName = ssi.AuthorName;
+                storyItem.Description = ssi.Description;
+                storyItem.Contents = ssi.Contents;
+                storyItem.Tag = ssi.Tag;
+
+                storyItem.AuthorID = ssi.AuthorName;
+                storyItem.Rating = "5";
+                storyItem.NumRatings = 0;
+                storyItem.Date = DateTime.Now.ToString();
+                storyItem.ImageURL = "no url";
+
+                _context.StoryItem.Add(storyItem);
+                await _context.SaveChangesAsync();
+
+                return Ok($"File: {ssi.Title} has successfully uploaded");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"An error has occured. Details: {ex.Message}");
+            }
         }
 
         // DELETE: api/Story/5
